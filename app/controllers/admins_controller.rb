@@ -4,7 +4,7 @@ class AdminsController < ApplicationController
   end
 
   def create
-    @admin = Admin.new(params[:user])
+    @admin = Admin.new(params[:admin])
     if @admin.save
       redirect_to home_path, :notice => "Signed up!"
     else
