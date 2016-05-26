@@ -2,13 +2,33 @@
 <html>
 <head>
   <title>PrayerlyApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div class="navbar navbar-inverse navbar-default">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Prayerly</a></li>
+          </ul>
+        </div><!--/.nav-header -->
 
-<%= yield %>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>Log In/Log Out Here</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+     <%= yield %>
+    </div>
 
 </body>
 </html>
