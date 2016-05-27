@@ -20,6 +20,7 @@ class PrayersController < ApplicationController
   end
 
   def show
+    @prayer= Prayer.find_by_id(params[:id])
     render :show
   end
 
