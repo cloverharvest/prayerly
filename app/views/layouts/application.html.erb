@@ -10,24 +10,42 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="navbar navbar-default">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
         <div class="navbar-header">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Prayerly</a></li>
+            <li><a class="navbar-root" href="/">Prayerly</a></li>
           </ul>
-        </div><!--/.nav-header -->
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li></li>
-        </ul>
+        </div>
         <ul class="nav navbar-nav navbar-right">
-          <li>Log In/Log Out Here</li>
+          <div id="admin_nav">
+              <% if current_admin %>
+                Logged in as <%= current_admin.email %>
+                <%= link_to "Log out", log_out_path %>
+              <% else %>
+                <%= link_to "Sign up", sign_up_path %> or
+                <%= link_to "log in", log_in_path %>
+              <% end %>
+          </div>
         </ul>
+      </div> <!--container-fluid-->
+    </nav>
+    <div class="container <%= controller_name %>_<%= action_name %>">
+      <div>
+        <% flash.each do |key, value| %>
+          <div class="alert alert-dismissible alert-<%= key %>">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            <%= value %>
+  ​
+          </div>
+        <% end %>
       </div>
-    </div>
-    <div class="container">
-     <%= yield %>
+
+      <%= yield %>
+
     </div>
 
 </body>

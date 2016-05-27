@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "log_in" => "session#new", :as => "log_in"
   get "sign_up" => "admins#new", :as => "sign_up"
 
-  root :to => "admins#new"
+  root :to => "home#index"
 
   resources :admins
   resources :sessions

@@ -7,23 +7,25 @@
     <div class="error_messages">
       <h2>Form is invalid</h2>
       <ul>
-        <% for message in @admin.errors.full_messages.to_sentence %>
+        <% for message in @admin.errors.full_messages %>
           <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-  <p>
+  <div>
     <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
+    <%= f.text_field :email, class:"form-control" %>
+  </div>
+  <div>
     <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
+    <%= f.password_field :password, class:"form-control" %>
+  </div>
+  <div>
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p class="button"><%= f.submit %></p>
+    <%= f.password_field :password_confirmation, class:"form-control" %>
+  </div>
+  <div class="button">
+    <%= f.submit "Create Admin", class: "btn btn-primary" %>
+  </div>
 <% end %>
