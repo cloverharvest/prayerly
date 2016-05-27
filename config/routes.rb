@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   resources :admins
   resources :sessions
+  resources :prayers
 
   get "/prayers", to: "prayers#index"
-    
+  get "/prayers/new", to: "prayers#new"
 end

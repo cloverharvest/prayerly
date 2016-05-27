@@ -1,12 +1,26 @@
 <h1>Welcome to Prayers#Index</h1>
 
-Put Searchbox
+Put Searchbox (Pending)
 
 Display Links to Prayers
 
-<% form_tag prayers_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :title => nil %>
-  </p>
-<% end %>
+<div class="prayer-list">
+  <% @prayers.each do |prayer| %>
+    <div class="row">
+        <div class="col-sm-4 col-md-5">
+          <%= image_tag prayer.image, :class => "img-responsive" %>
+        </div>
+        <div class="col-sm-8 col-md-7">
+          <p class="list-group-item-text">
+          <%= link_to prayer_path(prayer) do %>
+            <strong>Title:</strong> <%= prayer.title %><br />
+          <% end %>
+            <strong>Text:</strong> <%= prayer.text %><br />
+          </p>
+        </div>
+
+    </div>
+    <br />
+    <br />
+  <% end %>
+</div>
