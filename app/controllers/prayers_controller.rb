@@ -1,7 +1,6 @@
 class PrayersController < ApplicationController
   def index
-    @prayers = Prayer.all
-    render :index
+    @prayers = Prayer.search(params[:search])
   end
 
 end
