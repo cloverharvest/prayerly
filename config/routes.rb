@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :admins
   resources :sessions
 
+  get "/prayers", to: "prayers#index"
+    
 end
