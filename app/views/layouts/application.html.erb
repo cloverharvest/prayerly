@@ -24,7 +24,7 @@
                 <%= link_to "Log out", log_out_path %>
               <% else %>
                 <%= link_to "Sign up", sign_up_path %> or
-                <%= link_to "log in", log_in_path %>
+                <%= link_to "Log in", log_in_path %>
               <% end %>
           </div>
         </ul>
@@ -33,7 +33,7 @@
     <div class="container <%= controller_name %>_<%= action_name %>">
       <div>
         <% flash.each do |key, value| %>
-          <div class="alert alert-dismissible alert-<%= key %>">
+          <div class="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
