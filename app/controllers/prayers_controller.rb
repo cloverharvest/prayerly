@@ -24,6 +24,22 @@ class PrayersController < ApplicationController
     render :show
   end
 
+  def edit
+    @prayer= Prayer.find_by_id(params[:id])
+  end
+
+  def update
+    @prayer= Prayer.find_by_id(params[:id])
+    @prayer.update(prayer_params)
+    redirect_to prayer_path(@prayer)
+  end
+
+  def destroy
+    @prayer= Prayer.find_by_id(params[:id])
+    @prayer.destroy
+    flash[:success] = "Prayer deleted."
+    redirect_to prayers_path
+  end
 
   private
 
