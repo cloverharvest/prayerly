@@ -14,6 +14,7 @@
 </div>
 
 <div>
-  <%= link_to "Edit Prayer", edit_prayer_path %><br />
-  <%= link_to "Delete Prayer","/prayers/" + @prayer.id.to_s , method: :delete %>
+  <%= link_to "Edit prayer", edit_prayer_path %><br />
+  <%= link_to "Delete prayer","/prayers/" + @prayer.id.to_s , method: :delete %><br />
+  <%= link_to "See all prayers", prayers_path %>
 </div>
