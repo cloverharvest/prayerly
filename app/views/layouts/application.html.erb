@@ -10,38 +10,46 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <nav class="navbar navbar-default">
+
+  <nav class="navbar navbar-default">
       <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <ul class="nav navbar-nav">
-            <li><a class="navbar-root" href="/">Prayerly</a></li>
-          </ul>
+            <a class="navbar-brand" href="/">Prayerly</a>
         </div>
 
-        <ul class="nav navbar-nav navbar-right">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <% if !current_admin %>
+              <li><%= link_to "Prayers", prayers_path %></li>
+              <li><%= link_to "Candles", root_path%></li>
+              <% end %>
+            </li>
             <li>
               <% if current_admin %>
               <li>Logged in as <%= current_admin.email %></li>
               <li><%= link_to "Log out", log_out_path %></li>
-            </li>
               <% else %>
-                <%= link_to "Sign up", sign_up_path %> or
-                <%= link_to "Log in", log_in_path %>
-              <% end %>
-        </ul>
-      </div> <!--container-fluid-->
+            </li>
+            <li>
+              <li><%= link_to "Sign up", sign_up_path %></li>
+              <li><%= link_to "Log in", log_in_path %></li>
+            <% end %>
+            </li>
+         </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
     </nav>
+
     <div class="container <%= controller_name %>_<%= action_name %>">
       <div>
         <% flash.each do |key, value| %>
-          <div class="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-
-            <%= value %>
-  ​
-          </div>
+            <div class="alert">
+              <%= value %>
+            </div>
         <% end %>
       </div>
 
