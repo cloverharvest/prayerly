@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527180318) do
+ActiveRecord::Schema.define(version: 20160529180304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,23 @@ ActiveRecord::Schema.define(version: 20160527180318) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "cat_name"
+    t.integer  "prayer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "category_prayers", force: :cascade do |t|
+    t.integer  "category_id"
+    t.integer  "prayer_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "category_prayers", ["category_id"], name: "index_category_prayers_on_category_id", using: :btree
+  add_index "category_prayers", ["prayer_id"], name: "index_category_prayers_on_prayer_id", using: :btree
+
   create_table "prayers", force: :cascade do |t|
     t.string   "image"
     t.string   "title"
@@ -33,4 +50,6 @@ ActiveRecord::Schema.define(version: 20160527180318) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "category_prayers", "categories"
+  add_foreign_key "category_prayers", "prayers"
 end
