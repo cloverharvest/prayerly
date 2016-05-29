@@ -1,9 +1,9 @@
 <h1>Welcome to Prayers#Index</h1>
 
 
-<%= form_tag prayers_path, :method => 'get' do %>
+<%= form_tag prayers_path, :method => 'get', id: "search-form" do %>
   <div>
-    <%= text_field_tag :search, params[:search], size: 40, placeholder: 'search for a prayer', class: "form-control" %><br />
+    <%= text_field_tag :search, params[:search], size: 40, placeholder: 'Search prayers', class: "form-control" %><br />
   </div>
   <div class="search_button">
   <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
@@ -11,25 +11,12 @@
   <br />
 <% end %>
 
-<div class="prayer-list">
-  <% @prayers.each do |prayer| %>
-    <div class="row">
-        <div class="col-sm-4 col-md-5">
-          <%= image_tag prayer.image, :class => "img-responsive" %>
-        </div>
-        <div class="col-sm-8 col-md-7">
-          <p class="list-group-item-text">
-          <%= link_to prayer_path(prayer) do %>
-            <strong>Title:</strong> <%= prayer.title %><br />
-          <% end %>
-            <strong>Text:</strong> <%= prayer.text %><br />
-          </p>
-        </div>
-    </div>
-    <br />
-    <br />
-  <% end %>
-</div>
+<% if @prayers.present? %>
+  <%= render "prayer" %>
+<% else %>
+  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+<% end %>
+
 
 <div>
   <%= link_to "New Prayer", new_prayer_path %>

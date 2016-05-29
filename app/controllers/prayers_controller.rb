@@ -1,7 +1,11 @@
 class PrayersController < ApplicationController
   def index
     @prayers = Prayer.all
-    render :index
+    if params[:search]
+      @prayers = Prayer.search(params[:search]).order("created_at DESC")
+    else
+      @prayers = Prayer.all.order('created_at DESC')
+    end
   end
 
   def new
