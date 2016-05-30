@@ -1,15 +1,15 @@
 <div class="prayer-list">
   <% @prayers.each do |prayer| %>
     <div class="row">
-        <div class="col-sm-4 col-md-5">
+        <div class="col-sm-4 col-md-5" id="prayer-image">
           <%= image_tag prayer.image, :class => "img-responsive" %>
         </div>
         <div class="col-sm-8 col-md-7">
           <p class="list-group-item-text">
           <%= link_to prayer_path(prayer) do %>
-            <strong>Title:</strong> <%= prayer.title %><br />
+            <h4>Title: <%= prayer.title %></h4>
           <% end %>
-            <strong>Text:</strong> <%= prayer.text %><br />
+            <strong>Text:</strong> <p style="white-space: pre-wrap"><%= prayer.text %></p><br />
           </p>
         </div>
     </div>

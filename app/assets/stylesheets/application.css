@@ -15,3 +15,15 @@
  *= require_tree .
  *= require_self
  */
+* {
+  font-family: Avenir, Trebuchet MS;
+}
+
+a.navbar-brand {
+  font-size: x-large;
+}
+
+body{
+  background-color: #9D9D9D;
+
+}

@@ -1,3 +1,16 @@
 // Place all the styles related to the prayers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#prayer-image img {
+  width: 250px;
+  height: auto;
+}
+
+#prayer-image-show img{
+  width: 400px;
+  height: auto;
+}
+
+strong, p, a {
+  font-size: medium;
+}
