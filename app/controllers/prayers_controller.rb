@@ -48,8 +48,7 @@ class PrayersController < ApplicationController
   private
 
     def prayer_params
-      params.require(:prayer).permit(:image, :title, :text, :category_id)
+      params.require(:prayer).permit(:image, :title, :text)
     end
-
 
 end
