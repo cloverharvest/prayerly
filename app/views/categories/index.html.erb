@@ -1,6 +1,6 @@
 <%= form_tag('/categories', :method=>:get) do %>
   <div>
-  <%= select_tag "id", options_from_collection_for_select(Category.all, "id", "cat_name") %>
+  <%= select_tag "id", options_from_collection_for_select(Category.all, "id", "cat_name", params[:id]) %>
   </div>
   <div class="search_button">
   <%= submit_tag "Search Categories", :name => nil, class: "btn btn-primary" %>

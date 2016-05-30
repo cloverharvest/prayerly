@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :categories do
     resources :prayers
-end
+  end
 
   delete "prayers", to: "prayers#destroy"
 
