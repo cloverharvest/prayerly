@@ -9,10 +9,17 @@ Rails.application.routes.draw do
 
   resources :admins
   resources :sessions
-  resources :prayers
-  resources :categories
+
+  resources :categories do
+    resources :prayers
+  end
+
+  resources :prayers do
+    resources :comments
+  end
 
   delete "prayers", to: "prayers#destroy"
 
   get "categories", to: "categories#index"
+
 end
