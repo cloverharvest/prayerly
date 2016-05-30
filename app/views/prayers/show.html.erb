@@ -17,6 +17,8 @@
   <%= link_to "Edit prayer", edit_prayer_path %><br />
   <%= link_to "Delete prayer","/prayers/" + @prayer.id.to_s , method: :delete %><br />
   <%= link_to "See all prayers", prayers_path %>
+
+  <%= link_to "Add a prayer intention", new_prayer_comment_path %>
 </div>
 <% end %>
 
