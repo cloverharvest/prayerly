@@ -17,7 +17,8 @@
   <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
 <% end %>
 
-
-<div>
-  <%= link_to "New Prayer", new_prayer_path %>
-</div>
+<% if current_admin %>
+  <div>
+    <%= link_to "New Prayer", new_prayer_path %>
+  </div>
+<% end %>
