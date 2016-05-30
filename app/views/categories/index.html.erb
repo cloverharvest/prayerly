@@ -1,0 +1,15 @@
+<%= form_tag('/categories', :method=>:get) do %>
+  <div>
+  <%= select_tag "id", options_from_collection_for_select(Category.all, "id", "cat_name") %>
+  </div>
+  <div class="search_button">
+  <%= submit_tag "Search Categories", :name => nil, class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+
+<% if @prayers.present? %>
+  <%= render "category" %>
+<% else %>
+  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+<% end %>

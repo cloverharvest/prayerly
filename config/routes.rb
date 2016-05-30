@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   resources :prayers
   resources :categories
 
+  resources :categories do
+    resources :prayers
+end
+
   delete "prayers", to: "prayers#destroy"
 
   get "categories", to: "categories#index"
