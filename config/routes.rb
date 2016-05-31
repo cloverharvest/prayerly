@@ -7,6 +7,15 @@ Rails.application.routes.draw do
 
   root :to => "categories#index"
 
+  get  "/prayers/:id", to: "prayers#show", as: "prayer_path"
+
+  post "/prayers/:prayer_id/comments/new", to: "comments#create"
+
+
+  delete "prayers", to: "prayers#destroy"
+
+  get "categories", to: "categories#index"
+
   resources :admins
   resources :sessions
 
@@ -15,19 +24,12 @@ Rails.application.routes.draw do
   end
 
   resources :prayers do
-    resources :comments
+    resources :comments, only: [:new, :create, :update]
   end
-
-  post "/prayers/:prayer_id/comments/new", to: "comments#create"
-  get "/prayers/:prayer_id/comments/:id(.:format)", to: "comments#show", as: "prayer_comment_path"
-
 
   resources :categories do
     resources :prayers
   end
 
-  delete "prayers", to: "prayers#destroy"
-
-  get "categories", to: "categories#index"
 
 end
