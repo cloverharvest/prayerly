@@ -19,9 +19,6 @@ Rails.application.routes.draw do
   resources :admins
   resources :sessions
 
-  resources :categories do
-    resources :prayers
-  end
 
   resources :prayers do
     resources :comments, only: [:new, :create, :update]
@@ -31,5 +28,8 @@ Rails.application.routes.draw do
     resources :prayers
   end
 
+  resources :prayers do
+    resources :categories
+  end
 
 end

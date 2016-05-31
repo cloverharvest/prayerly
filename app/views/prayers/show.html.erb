@@ -22,7 +22,7 @@
 </div>
 <% end %>
 
-<strong> <h3 class="comments-header">Prayer Intentions:</h3> </strong>
+<h3 class="comments-header">Prayer Intentions:</h3>
   <hr>
   <div>
 	<% @prayer.comments.each do |c| %>
@@ -33,7 +33,7 @@
 				  <p><%= c.name %></p>
         </div>
         <div>
-          <h4>Prayer Intention</h4>
+          <h4>Prayer Intention:</h4>
           <p><%= c.prayer_intention %></p>
         </div>
 				<p class="small pull-right post-show-post-date">posted <%= time_ago_in_words(c.created_at) %> ago</p><br>
