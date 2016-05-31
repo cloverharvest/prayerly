@@ -12,34 +12,12 @@
     </div>
 </div>
 
+<%= link_to "Add a Prayer Intention", new_prayer_comment_path(@prayer) %>
+
 <% if current_admin %>
 <div>
   <%= link_to "Edit prayer", edit_prayer_path %><br />
   <%= link_to "Delete prayer","/prayers/" + @prayer.id.to_s , method: :delete %><br />
   <%= link_to "See all prayers", prayers_path %>
-
-  <%= link_to "Add a prayer intention", new_prayer_comment_path %>
 </div>
 <% end %>
-
-<div class="col-xs-6 col-xs-offset-3">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Add A Prayer Intention</h3>
-    </div>
-    <div class="panel-body">
-       <%= form_for :comment do |f| %>
-         <div class="form-field">
-           <%= f.text_field :name, required: true, placeholder: "Name", class:"form-control" %>
-           <em> Please put your initials if your post is sensitive.Thank you.</em>
-         </div>
-         <div class="form-field">
-           <%= f.text_area :prayer_intention, required: true, placeholder: "Prayer intention", rows: 5, class:"form-control" %>
-         </div>
-         <div class="form-field prayer-show-post-button">
-           <%= f.submit "Submit", class: "btn btn-block btn-success prayer-show-comment-button"%>
-         </div>
-       <% end %>
-    </div>
-  </div>
-</div>

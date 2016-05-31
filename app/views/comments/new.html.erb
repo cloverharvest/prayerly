@@ -1,2 +1,30 @@
 <h1>Comment#new</h1>
 <p>Find me in app/views/comment/new.html.erb</p>
+
+<div class="col-xs-6 col-xs-offset-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Add A Prayer Intention</h3>
+    </div>
+    <div class="panel-body">
+       <%= form_for :comment do |f| %>
+         <div class="form-field">
+           <%= f.text_field :name, required: true, placeholder: "Name", class:"form-control" %>
+           <em>   Pls. put your initials or alias if your post is sensitive. Thank you.</em>
+           <br />
+           <br />
+         </div>
+         <div class="form-field">
+           <%= f.text_area :prayer_intention, required: true, placeholder: "Prayer intention", rows: 5, class:"form-control" %><br />
+         </div>
+         <div class="form-field">
+           <%= f.text_area :prayer_id, placeholder: "Prayer id", class:"form-control" %><br/>
+         </div>
+         
+         <div class="form-field prayer-show-post-button">
+           <%= f.submit "Submit", class: "btn btn-block btn-success prayer-show-comment-button"%>
+         </div>
+       <% end %>
+    </div>
+  </div>
+</div>
