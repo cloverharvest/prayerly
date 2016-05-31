@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  post "/prayers/:prayer_id/comments/new", to: "comments#create"
+  get "/prayers/:prayer_id/comments/:id(.:format)", to: "comments#show", as: "prayer_comment_path" 
+
   delete "prayers", to: "prayers#destroy"
 
   get "categories", to: "categories#index"
