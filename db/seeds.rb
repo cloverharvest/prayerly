@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Prayer.destroy_all
+Category.destroy_all
 
 
 puts "All old prayers have been cleared."
@@ -56,3 +57,13 @@ Prayer.create({image:"http://www.marysheart.com/online/wp-content/gallery/images
 
 
 puts "Created #{Prayer.count} prayers."
+
+Category.create({cat_name: "Basic Catholic Prayers"})
+Category.create({cat_name: "Prayers to Jesus"})
+Category.create({cat_name: "Marian Prayers"})
+Category.create({cat_name: "Prayers of the Saints"})
+Category.create({cat_name: "Personal Prayers"})
+Category.create({cat_name: "Prayers for Children"})
+Category.create({cat_name: "Prayers for Advnet"})
+
+puts "Created #{Category.count} categories"
