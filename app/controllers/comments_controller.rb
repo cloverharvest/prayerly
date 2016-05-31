@@ -31,6 +31,6 @@ class CommentsController < ApplicationController
   private
 
     def comment_params
-      params.require(:comment).permit(:name, :prayer_intention, :prayer_id, :id)
+      params.require(:comment).permit(:name, :prayer_intention, :prayer_id, :id, :humanizer_answer, :humanizer_question_id)
     end
 end
