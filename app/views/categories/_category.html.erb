@@ -1,6 +1,6 @@
-<!-- <% @prayers.each do |prayer| %> -->
 
-  <%= link_to @prayer do %>
-    <%= Category.find(params[:id]).prayers%>
+<% @prayers.each do |prayer| %>
+  <%= link_to [@category, @prayer] do %>
+    <%= prayer.title%>
   <% end %>
-<!-- <% end %> -->
+<% end %>
