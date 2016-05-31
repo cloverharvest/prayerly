@@ -40,9 +40,12 @@ class PrayersController < ApplicationController
 
   def destroy
     @prayer= Prayer.find_by_id(params[:id])
-    @prayer.destroy
-    flash[:success] = "Prayer deleted."
-    redirect_to prayers_path
+    if @prayer.destroy
+      flash[:success] = "Prayer deleted."
+      redirect_to prayers_path
+    else
+      flash[:error] = @prayer.errors.full_messages.to_sentence
+    end  
   end
 
   private

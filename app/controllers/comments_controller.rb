@@ -12,11 +12,11 @@ class CommentsController < ApplicationController
 
     @comment = Comment.new(comment_params)
     if @comment.save
-      flash[:success] = "New comment added."
+      flash[:success] = "New comment created."
       # need help here
       redirect_to prayer_comment_path(@comment)
     else
-      flash[:error] = @comment.errors.full_messages
+      flash[:error] = @comment.errors.full_messages.to_sentence
       render :new
     end
   end

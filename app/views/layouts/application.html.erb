@@ -42,9 +42,9 @@
 
     <div class="container <%= controller_name %>_<%= action_name %>">
       <div>
-        <% flash.each do |key, value| %>
+        <% flash.each do |name, msg| %>
             <div class="alert">
-              <%= value %>
+              <%= msg %>
             </div>
         <% end %>
       </div>
