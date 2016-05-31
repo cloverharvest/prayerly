@@ -14,7 +14,8 @@ class CommentsController < ApplicationController
     if @comment.save
       flash[:success] = "New comment created."
       # need help here
-      redirect_to prayer_comment_path(@comment)
+      # redirect_to prayer_comment_path(@comment)
+      redirect_to '/prayers/' + @comment.prayer_id.to_s
     else
       flash[:error] = @comment.errors.full_messages.to_sentence
       render :new
