@@ -18,12 +18,11 @@
            <%= f.text_area :prayer_intention, required: true, placeholder: "Prayer intention", rows: 5, class:"form-control" %><br />
          </div>
          <div class="form-field">
-           <%= f.text_field :prayer_id, placeholder: "Prayer id", class:"form-control" %><br />
+           <%= f.hidden_field :prayer_id, placeholder: "Prayer id", class:"form-control" %>
          </div>
          <div>
            <%= f.label :humanizer_answer, @comment.humanizer_question %>
-           <%=
-           f.text_field :humanizer_answer %><br />
+           <%= f.text_field :humanizer_answer %><br />
            <%= f.hidden_field :humanizer_question_id %><br />
          </div>
          <div class="form-field prayer-show-post-button">

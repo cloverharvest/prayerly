@@ -5,14 +5,14 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @comment = Comment.new
+    @comment = Comment.new(prayer_id: params[:prayer_id])
   end
 
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
       flash[:success] = "New comment created."
-      redirect_to '/prayers/' + params[:prayer_id].to_s
+      redirect_to @comment.prayer
     else
       flash[:error] = @comment.errors.full_messages.to_sentence
       render :new
