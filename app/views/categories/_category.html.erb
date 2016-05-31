@@ -1,6 +1,4 @@
 
 <% @prayers.each do |prayer| %>
-  <%= link_to [@category, @prayer] do %>
-    <%= prayer.title%><br />
-  <% end %>
+  <%= link_to prayer.title, prayer_path(prayer)%><br />
 <% end %>
