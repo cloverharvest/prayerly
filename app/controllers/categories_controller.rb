@@ -7,4 +7,9 @@ class CategoriesController < ApplicationController
       @prayers = Prayer.all
     end
   end
+
+  def show
+    
+  end
+
 end
