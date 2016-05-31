@@ -12,6 +12,8 @@
     </div>
 </div>
 
+<%= link_to "Add a Prayer Intention", new_prayer_comment_path(@prayer) %>
+
 <% if current_admin %>
 <div>
   <%= link_to "Edit prayer", edit_prayer_path %><br />
@@ -19,3 +21,24 @@
   <%= link_to "See all prayers", prayers_path %>
 </div>
 <% end %>
+
+<strong> <h3 class="comments-header">Prayer Intentions:</h3> </strong>
+  <hr>
+  <div>
+	<% @prayer.comments.each do |c| %>
+		<div class="row">
+      <div class="col-md-12">
+        <div>
+          <h4>Name:</h4>
+				  <p><%= c.name %></p>
+        </div>
+        <div>
+          <h4>Prayer Intention</h4>
+          <p><%= c.prayer_intention %></p>
+        </div>
+				<p class="small pull-right post-show-post-date">posted <%= time_ago_in_words(c.created_at) %> ago</p><br>
+			</div>
+		</div>
+    <hr>
+  <% end %>
+</div>

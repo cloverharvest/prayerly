@@ -1,3 +1,6 @@
+<h1>Categories#index</h1>
+<p>Find me in app/views/categories/index.html.erb</p>
+
 <%= form_tag('/categories', :method=>:get) do %>
   <div>
   <%= select_tag "id", options_from_collection_for_select(Category.all, "id", "cat_name", params[:id]) %>
