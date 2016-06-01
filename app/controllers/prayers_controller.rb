@@ -1,6 +1,5 @@
 class PrayersController < ApplicationController
-  before_action :authenticate_admin!, :except => [:index, :show]
-
+  
   def index
     @prayers = Prayer.all
     if params[:search]

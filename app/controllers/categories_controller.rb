@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_admin!, :except => [:index]
 
   def index
     if params[:id]
