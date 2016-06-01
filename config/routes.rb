@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'categories/index'
 
-  get "log_out", to: "sessions#destroy", as: "log_out"
-  get "log_in", to: "sessions#new", as: "log_in"
-  get "sign_up", to: "admins#new", as: "sign_up"
+  get "/log_out", to: "sessions#destroy", as: "log_out"
+  get "/log_in", to: "sessions#new", as: "log_in"
+  get "/sign_up", to: "admins#new", as: "sign_up"
 
   root :to => "categories#index"
 
@@ -29,5 +28,5 @@ Rails.application.routes.draw do
     resources :categories
   end
 
-  get "*path" => redirect("/")  
+  # get "*path" => redirect("/")
 end

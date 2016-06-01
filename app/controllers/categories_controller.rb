@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   include SessionsHelper
-  before_action :check_admin, except: [:index]
+  before_action :check_admin, except: :index
 
   def index
     if params[:id]
