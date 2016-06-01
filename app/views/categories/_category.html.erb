@@ -1,4 +1,5 @@
 
 <% @prayers.each do |prayer| %>
+  <br />
   <%= link_to prayer.title, prayer_path(prayer)%><br />
 <% end %>
