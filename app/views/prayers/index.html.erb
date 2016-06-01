@@ -1,24 +1,27 @@
-<h1>Welcome to Prayers#Index</h1>
-
-
-<%= form_tag prayers_path, :method => 'get', id: "search-form" do %>
-  <div>
-    <%= text_field_tag :search, params[:search], size: 40, placeholder: 'Search prayers', class: "form-control" %><br />
-  </div>
-  <div class="search_button">
-  <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
-  </div>
-  <br />
-<% end %>
-
-<% if @prayers.present? %>
-  <%= render "prayer" %>
-<% else %>
-  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
-<% end %>
-
-<% if current_admin %>
-  <div>
-    <%= link_to "Add a New Prayer", new_prayer_path %>
-  </div>
-<% end %>
+<h1>All prayers</h1>
+<div>
+  <%= form_tag prayers_path, :method => 'get', id: "search-form" do %>
+    <div>
+      <%= text_field_tag :search, params[:search], size: 40, placeholder: 'Search prayers', class: "form-control" %>
+    </div>
+    <div class="search_button">
+    <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+    </div>
+    <br />
+    <br />
+  <% end %>
+</div>
+<div>
+  <% if @prayers.present? %>
+    <%= render "prayer" %>
+  <% else %>
+    <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+  <% end %>
+</div>
+<div>
+  <% if current_admin %>
+    <div>
+      <%= link_to "Add a new prayer", new_prayer_path %>
+    </div>
+  <% end %>
+</div>
