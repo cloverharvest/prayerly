@@ -7,8 +7,6 @@ Rails.application.routes.draw do
 
   root :to => "categories#index"
 
-  get  "/prayers/:id", to: "prayers#show", as: "prayer_path"
-
   post "/prayers/:prayer_id/comments/new", to: "comments#create"
 
   delete "prayers", to: "prayers#destroy"
@@ -20,7 +18,7 @@ Rails.application.routes.draw do
 
 
   resources :prayers do
-    resources :comments, only: [:new, :create, :update]
+    resources :comments
   end
 
   resources :categories do
