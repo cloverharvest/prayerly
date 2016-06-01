@@ -38,6 +38,6 @@
 				<p class="small pull-right post-show-post-date">posted <%= time_ago_in_words(c.created_at) %> ago</p><br>
 			</div>
 		</div>
-    <%= link_to "Edit a prayer intention", edit_prayer_comment_path(:prayer_id) %><br />
+    <%= link_to "Edit a prayer intention", '/prayers/' + @prayer.id.to_s + '/comments/' + c.id.to_s + '/edit' %><br />
   <% end %>
 </div>

@@ -27,7 +27,8 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @comment = Comment.find(prayer_id: params[:prayer_id])
+    @comment = Comment.find_by_id(params[:id])
+    # (prayer_id: params[:prayer_id])
   end
 
   def update
@@ -37,7 +38,7 @@ class CommentsController < ApplicationController
       redirect_to @comment.prayer
     else
       flash[:error] = @comment.errors.full_messages.to_sentence
-      render :new
+      render :edit
     end
   end
 
