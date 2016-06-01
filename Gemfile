@@ -37,10 +37,6 @@ gem 'therubyracer'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', :require =>'bcrypt'
 
-group :development, :test do
-gem 'sqlite3'
-end
-
 group :production do
 gem 'pg'
 gem 'rails_12factor'

@@ -15,11 +15,11 @@
 <%= link_to "Add a Prayer Intention", new_prayer_comment_path(@prayer) %>
 
 <% if current_admin %>
-<div>
-  <%= link_to "Edit prayer", edit_prayer_path %><br />
-  <%= link_to "Delete prayer","/prayers/" + @prayer.id.to_s, method: :delete %><br />
-  <%= link_to "See all prayers", prayers_path %>
-</div>
+  <div>
+    <%= link_to "Edit prayer", edit_prayer_path %><br />
+    <%= link_to "Delete prayer","/prayers/" + @prayer.id.to_s, method: :delete %><br />
+    <%= link_to "See all prayers", prayers_path %><br />
+  </div>
 <% end %>
 
 <h3 class="comments-header">Prayer Intentions:</h3>
@@ -38,5 +38,6 @@
 				<p class="small pull-right post-show-post-date">posted <%= time_ago_in_words(c.created_at) %> ago</p><br>
 			</div>
 		</div>
+    <%= link_to "Edit a prayer intention", edit_prayer_comment_path(:prayer_id) %><br />
   <% end %>
 </div>
