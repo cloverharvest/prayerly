@@ -28,14 +28,17 @@ class CommentsController < ApplicationController
 
   def edit
     @comment = Comment.find_by_id(params[:id])
+    @prayer = Prayer.find_by_id(params[:prayer_id])
     # (prayer_id: params[:prayer_id])
   end
 
   def update
-    @comment = Comment.find(prayer_id: params[:prayer_id])
+    @comment = Comment.find_by prayer_id: params[:prayer_id]
     if @comment.update(comment_params)
-      flash[:success] = "Prayer intention updated."
-      redirect_to @comment.prayer
+      flash[:success] = "Comment updated."
+      # need help here
+      redirect_to '/prayers/' + params[:prayer_id].to_s
+      # @comment.prayer
     else
       flash[:error] = @comment.errors.full_messages.to_sentence
       render :edit

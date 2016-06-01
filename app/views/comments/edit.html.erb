@@ -5,7 +5,8 @@
       <h3 class="panel-title">Edit a comment</h3>
     </div>
     <div class="panel-body">
-       <%= form_for :comment do |f| %>
+       <%= form_for @comment, url: '/prayers/' + @prayer.id.to_s + '/comments/' + @comment.id.to_s, html: {method: "patch"} do |f| %>
+
          <div class="form-field">
            <%= f.text_field :name, required: true, placeholder: "Name", class:"form-control" %>
             <em class="text-warning">Pls. put your initials or alias if your post is sensitive. Thank you.</em>
@@ -23,7 +24,7 @@
            <%= f.hidden_field :humanizer_question_id %><br />
          </div>
          <div class="form-field comment-edit-button">
-           <%= f.submit "Edit prayer intention", class: "btn btn-block btn-success prayer-show-comment-button"%>
+           <%= f.submit "Submit edited prayer", class: "btn btn-block btn-success prayer-show-comment-button"%>
          </div>
        <% end %>
     </div>
