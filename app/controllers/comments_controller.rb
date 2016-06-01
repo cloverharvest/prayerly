@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-
+  include SessionsHelper
+  before_action :check_admin, except: [:new, :create, :show]
 
   def index
     @comments = Comment.all
