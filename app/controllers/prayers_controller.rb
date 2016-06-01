@@ -1,4 +1,6 @@
 class PrayersController < ApplicationController
+  include SessionsHelper
+  before_action :check_admin, except: [:index, :show]
   
   def index
     @prayers = Prayer.all
