@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_admin!, :only => [:edit, :update, :destroy]
+  before_action :authenticate_admin!, :only => [:index, :edit, :update, :destroy]
 
   def index
     @comments = Comment.all
