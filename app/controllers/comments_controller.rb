@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before action :authenticate_admin!, :except => [:new, :create, :show]
   def index
     @comments = Comment.all
     render :index
@@ -27,6 +28,11 @@ class CommentsController < ApplicationController
   def edit
   end
 
+  def update
+  end
+
+  def destroy
+  end
 
   private
 
