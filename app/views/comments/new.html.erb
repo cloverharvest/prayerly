@@ -10,9 +10,8 @@
        <%= form_for :comment do |f| %>
          <div class="form-field">
            <%= f.text_field :name, required: true, placeholder: "Name", class:"form-control" %>
-           <em>   Pls. put your initials or alias if your post is sensitive. Thank you.</em>
-           <br />
-           <br />
+            <em class="text-warning">Pls. put your initials or alias if your post is sensitive. Thank you.</em>
+            <br />
          </div>
          <div class="form-field">
            <%= f.text_area :prayer_intention, required: true, placeholder: "Prayer intention", rows: 5, class:"form-control" %><br />

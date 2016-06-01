@@ -11,7 +11,6 @@ Rails.application.routes.draw do
 
   post "/prayers/:prayer_id/comments/new", to: "comments#create"
 
-
   delete "prayers", to: "prayers#destroy"
 
   get "categories", to: "categories#index"

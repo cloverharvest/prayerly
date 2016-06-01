@@ -8,7 +8,24 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def show
-
+  def new
+    @category = Category.new(id: params[:id])
   end
+
+  def create
+    @category = Category.new(category_params)
+    if @category.save
+      flash[:success] = "New category added."
+      # redirect_to category_path(@category)
+      redirect_to categories_path
+    else
+      flash[:error] = @category.errors.full_messages.to_sentence
+      render :new
+    end
+  end
+
+  private
+    def category_params
+      params.require(:category).permit(:cat_name, :id)
+    end
 end

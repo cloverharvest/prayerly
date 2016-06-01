@@ -23,7 +23,6 @@
 <% end %>
 
 <h3 class="comments-header">Prayer Intentions:</h3>
-  <hr>
   <div>
 	<% @prayer.comments.each do |c| %>
 		<div class="row">
@@ -39,6 +38,5 @@
 				<p class="small pull-right post-show-post-date">posted <%= time_ago_in_words(c.created_at) %> ago</p><br>
 			</div>
 		</div>
-    <hr>
   <% end %>
 </div>
