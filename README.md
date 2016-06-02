@@ -54,6 +54,6 @@ Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
 
 ###Screenshots
 
-![picture alt](prayerly/lib/assets/Screen Shot 2016-06-02 at 4.11.55 PM.png?raw=true "User Story")
+![alt text](public/User_story.png)
 
-![picture alt](prayerly/lib/assets/erd_and_models.JPG?raw=true "ERD and Models")
+![alt text](public/erd_and_models.JPG)
