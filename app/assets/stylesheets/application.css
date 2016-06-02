@@ -20,7 +20,8 @@
 }
 
 nav.navbar {
-  background-color: #4CAF50;
+  /*background-color: #4CAF50;*/
+  background-color: #2e185b;
 }
 
 a.navbar-brand {
@@ -28,7 +29,7 @@ a.navbar-brand {
 }
 
 body{
-  background-color: #E9EBEE;
+  background-color: #AB704B;
 }
 
 .alert-error  {
@@ -54,4 +55,5 @@ body{
 
 #current_admin_list{
   margin-top: 17px;
+  color: #FAEBD7;
 }
