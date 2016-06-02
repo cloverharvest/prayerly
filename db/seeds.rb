@@ -7,9 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Category.destroy_all
-Prayer.destroy_all
 puts "All category have been cleared."
+
+Prayer.destroy_all
 puts "All old prayers have been cleared."
+
+Comment.destroy_all
+puts "All comments have been cleared."
 
 Category.create({cat_name: "Basic Catholic Prayers"})
 Category.create({cat_name: "Prayers to Jesus"})
@@ -17,7 +21,6 @@ Category.create({cat_name: "Marian Prayers"})
 Category.create({cat_name: "Prayers of the Saints"})
 Category.create({cat_name: "Personal Prayers"})
 Category.create({cat_name: "Prayers for Children"})
-Category.create({cat_name: "Prayers for Advent"})
 
 puts "Created #{Category.count} categories"
 
@@ -66,4 +69,17 @@ Prayer.create({image:"https://upload.wikimedia.org/wikipedia/commons/7/7c/Cima_d
 Prayer.create({image:"http://www.marysheart.com/online/wp-content/gallery/images-of-mary/virgin-mary.jpg", title: "Memorare", text: "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thine intercession was left unaided. Inspired by this confidence,I fly unto thee, O Virgin of virgins, my mother; to thee do I come, before thee I stand, sinful and sorrowful. O Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me. Amen.", categories: Category.where(cat_name: "Marian Prayers")})
 Prayer.create({image:"http://wallpapershdfine.com/wp-content/gallery/infant-jesus-images/litany20c.jpg" ,title: "Prayer to the Infant Jesus", text:"O Most Amiable Child Jesus, You Who said: 'Ask and you shall receive,' graciously hear my petition and grant me the favor I ask of You, if it be for Your Greater Honor and Glory and for the good of my soul. Amen.", categories: Category.where(cat_name: "Prayers to Jesus")})
 Prayer.create({image:"http://www.seeminglyunfocused.com/wp-content/uploads/2015/12/Our-Lady-2.jpg", title: "The Fatima Prayer", text: "O my God, I believe, I adore, I hope and I love Thee. I ask pardon for those who do not believe, do not adore, do not hope and do not love Thee.", categories: Category.where(cat_name: "Basic Catholic Prayers")})
+
 puts "Created #{Prayer.count} prayers."
+
+# Comment.create({name:"Fatima", prayer_intention:"I hope I have fun and have a safe trip to Kathmandu.", prayers: Prayer.where(title: "Prayer for Travelers")})
+# Comment.create({name:"Cyrus", prayer_intention:"Please pray for all the children in Syria.", prayers: Prayer.where(title: "Prayer for a Child")})
+# Comment.create({name:"Charlie", prayer_intention:"Please pray for me. I will be embarking on a pilgrimage across Europe. May it be a fruitful and protected endeavour. Thank you.", prayers: Prayer.where(title: "Prayer of St. Benedict of Nursia")})
+# Comment.create({name:"David", prayer_intention:"There's lost of stuff to fo today. May I keep a good perspective and be a kind person even amid the busyness.", prayers: Prayer.where(title:"Morning Offering")})
+# Comment.create({name:"Edward", prayer_intention:"I don't know what's next. Please guide me, Lord. Thank you.", prayers: Prayer.where(title: "Short Prayer")})
+# Comment.create({name:"Francesca", prayer_intention:"Please teach me how to pray.", prayers: Prayer.where(title:"Te Deum")})
+# Comment.create({name:"George", prayer_intention:"After living far away from home, my father wrote to me in a letter, one day, that when I feel down I should consider praying the Our Father", prayers: Prayer.where(title:"Our Father")})
+# Comment.create({name:"Henry", prayer_intention:"A priest once told me that it would be good take Mary as my Spiritual Mother especially in matters of being a good wife and mother", prayers: Prayer.where(title:"Memorare")})
+#
+#
+# puts "Created #{Comment.count} prayer intentions."
