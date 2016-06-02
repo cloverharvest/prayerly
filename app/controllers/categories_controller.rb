@@ -19,7 +19,6 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     if @category.save
       flash[:success] = "New category added."
-      # redirect_to category_path(@category)
       redirect_to categories_path
     else
       flash[:error] = @category.errors.full_messages.to_sentence
