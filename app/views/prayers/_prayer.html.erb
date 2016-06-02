@@ -9,10 +9,14 @@
             </div>
             <div class="col-xs-8">
               <p class="list-group-item-text">
+              <div>
               <%= link_to prayer_path(prayer) do %>
                 <h4>Title: <%= prayer.title %></h4>
               <% end %>
+             </div>
+             <div>
                 <strong>Text:</strong> <p style="white-space: pre-wrap"><%= prayer.text %></p><br />
+             </div>
               </p>
             </div>
         </div>
