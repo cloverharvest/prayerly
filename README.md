@@ -56,4 +56,4 @@ Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
 
 ![User Story](https://github.com/cloverharvest/prayerly/lib/assets/Screen Shot 2016-06-02 at 4.11.55 PM.png "User Story")
 
-![ERD and Models](https://github.com/cloverharvest/prayerly/lib/assets/erd_and_models.JPG "ERD and models")
+![ERD and Models](https://github.com/cloverharvest/prayerly/lib/assets/erd_and_models.JPG "ERD and Models")
