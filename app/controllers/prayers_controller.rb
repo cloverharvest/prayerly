@@ -1,7 +1,7 @@
 class PrayersController < ApplicationController
   include SessionsHelper
   before_action :check_admin, except: [:index, :show]
-  
+
   def index
     @prayers = Prayer.all
     if params[:search]
@@ -37,8 +37,13 @@ class PrayersController < ApplicationController
 
   def update
     @prayer= Prayer.find_by_id(params[:id])
-    @prayer.update(prayer_params)
-    redirect_to prayer_path(@prayer)
+    if @prayer.update(prayer_params)
+      flash[:success] = "Prayer edited."
+      redirect_to prayer_path(@prayer)
+    else
+      flash[:error] = @prayer.errors.full_messages.to_sentence
+      render :edit
+    end
   end
 
   def destroy
