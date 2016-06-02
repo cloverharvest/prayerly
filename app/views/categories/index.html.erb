@@ -2,6 +2,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3>Time to rest...time to pray...</h3>
+        <h4>Choose a prayer category</h4>
         <%= form_tag('/categories', :method=>:get) do %>
           <div>
           <%= select_tag "id", options_from_collection_for_select(Category.all, "id", "cat_name", params[:id]) %>
