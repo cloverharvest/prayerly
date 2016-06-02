@@ -1,19 +1,24 @@
-<div class="prayer-list">
+<div class="prayer-list-container container">
   <% @prayers.each do |prayer| %>
-    <div class="row">
-        <div class="col-sm-4 col-md-5" id="prayer-image">
-          <%= image_tag prayer.image, :class => "img-responsive" %>
+  <div class="col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-4" id="prayer-image">
+              <%= image_tag prayer.image, :class => "img-responsive" %>
+            </div>
+            <div class="col-xs-8">
+              <p class="list-group-item-text">
+              <%= link_to prayer_path(prayer) do %>
+                <h4>Title: <%= prayer.title %></h4>
+              <% end %>
+                <strong>Text:</strong> <p style="white-space: pre-wrap"><%= prayer.text %></p><br />
+              </p>
+            </div>
         </div>
-        <div class="col-sm-8 col-md-7">
-          <p class="list-group-item-text">
-          <%= link_to prayer_path(prayer) do %>
-            <h4>Title: <%= prayer.title %></h4>
-          <% end %>
-            <strong>Text:</strong> <p style="white-space: pre-wrap"><%= prayer.text %></p><br />
-          </p>
-        </div>
+        <br />
+      </div>
     </div>
-    <br />
-    <br />
+  </div>
   <% end %>
 </div>

@@ -1,27 +1,32 @@
 <h1>All prayers</h1>
-<div>
-  <%= form_tag prayers_path, :method => 'get', id: "search-form" do %>
+<div class="col-xs-10 col-xs-offset-1">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <%= form_tag prayers_path, :method => 'get', id: "search-form" do %>
+        <div>
+          <%= text_field_tag :search, params[:search], size: 30, placeholder: 'Search prayers', class: "form-control" %>
+        </div>
+        <div class="search_button">
+        <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+        </div>
+        <br />
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="col-xs-10 col-xs-offset-1">
+  <% if current_admin %>
     <div>
-      <%= text_field_tag :search, params[:search], size: 40, placeholder: 'Search prayers', class: "form-control" %>
+      <%= link_to "Add a new prayer", new_prayer_path %>
     </div>
-    <div class="search_button">
-    <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
-    </div>
-    <br />
-    <br />
   <% end %>
 </div>
+<br />
+<br />
 <div>
   <% if @prayers.present? %>
     <%= render "prayer" %>
   <% else %>
     <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
-  <% end %>
-</div>
-<div>
-  <% if current_admin %>
-    <div>
-      <%= link_to "Add a new prayer", new_prayer_path %>
-    </div>
   <% end %>
 </div>
