@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "/log_in", to: "sessions#new", as: "log_in"
   get "/sign_up", to: "admins#new", as: "sign_up"
 
-  root :to => "categories#index"
+  root :to => "home#index"
 
   post "/prayers/:prayer_id/comments/new", to: "comments#create"
 

@@ -23,13 +23,13 @@
           <div class="nav navbar-nav navbar-right" >
               <li>
                 <% if !current_admin %>
-                <li><%= link_to "All Categories", root_path %></li>
+                <li><%= link_to "All Categories", categories_path %></li>
                 <li><%= link_to "All Prayers", prayers_path %></li>
                 <% end %>
               </li>
               <li>
                 <% if current_admin %>
-                  <li><%= link_to "All Categories", root_path %></li>
+                  <li><%= link_to "All Categories", categories_path %></li>
                   <li><%= link_to "All Prayers", prayers_path %></li>
                   <li id="current_admin_list">Logged in as <%= current_admin.email %></li>
                   <li><%= link_to "Log out", log_out_path %></li>
@@ -51,7 +51,7 @@
           </div>
         <% end %>
       </div>
-      <div>
+      <div class="container">
         <%= yield %>
       </div>
     </div>
