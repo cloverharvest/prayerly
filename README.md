@@ -1,8 +1,8 @@
 ## Prayerly
 
 ```
-###prayer
-*/prer/*
+prayer
+/prer/
 noun  
 
    * a solemn request for help or expression of thanks addressed to
@@ -26,6 +26,7 @@ It is the builder's intent that this serves as encouragement for coders and beli
 Credit goes to EWTN, catholiconline.com, praymorenovenas.com, gratefulness.com for the right direction and inspiration with regard to content.
 
 Please also visit Saintly, a saints database app built on Mongoose, Express and Node.js(MEN) stack.
+
 Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
 
 ###Technology Stack
@@ -33,6 +34,7 @@ Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
 * Ruby on Rails
 * Postgresql
 * HTML and CSS
+* Bootstrap and Material Colors
 
 ###Features
 
@@ -45,7 +47,9 @@ Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
 * MVC
 
 ### Planned Features
+
 * Light candles and dedicate it to a person or purpose
 * Have candles glow more if it is dedicated to a person with the same name or purpose
+* Ability to tag prayer intentions that have been read and prayed for by other users
 
 ###Screenshots
