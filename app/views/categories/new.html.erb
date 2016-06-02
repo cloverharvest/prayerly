@@ -5,7 +5,7 @@
         <h3 class="panel-title">Add a Category</h3><br />
         <%= form_for @category do |f| %>
         <div>
-          <%= f.text_field :cat_name, placeholder: "Category name", class:"form-control" %>
+          <%= f.text_field :cat_name, required: true, placeholder: "Category name", class:"form-control" %>
         </div>
 
         <div class="submit_button">

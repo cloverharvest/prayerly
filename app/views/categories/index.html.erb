@@ -1,8 +1,7 @@
 <div class="col-xs-10 col-xs-offset-1">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3>Time to rest...</h3>
-      <h3>Time to pray...</h3>
+      <h3>Time to rest...time to pray...</h3>
         <%= form_tag('/categories', :method=>:get) do %>
           <div>
           <%= select_tag "id", options_from_collection_for_select(Category.all, "id", "cat_name", params[:id]) %>
@@ -14,6 +13,17 @@
     </div>
   </div>
 </div>
+<% if current_admin %>
+<div class="col-xs-10 col-xs-offset-1">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div>
+        <%= link_to "Add New Category", new_category_path %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
 <div class="col-xs-10 col-xs-offset-1">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -27,15 +37,4 @@
       </div>
     </div>
   </div>
-</div>
-<div class="col-xs-10 col-xs-offset-1">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <div>
-        <% if current_admin %>
-          <%= link_to "Add New Category", new_category_path %>
-        <% end %>
-     </div>
-   </div>
- </div>
 </div>
