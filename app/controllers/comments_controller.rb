@@ -47,6 +47,13 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find_by prayer_id: params[:prayer_id]
+    if @comment.destroy
+      flash[:success] = "Prayer intention deleted."
+      redirect_to '/prayers/' + params[:prayer_id].to_s
+    else
+      flash[:error] = @comment.errors.full_messages.to_sentence
+    end
   end
 
   private

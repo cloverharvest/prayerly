@@ -3,8 +3,8 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="row>"
-           <div class="col-xs-4" id="prayer-image-show">
-            <%= image_tag @prayer.image %><br />
+          <div class="col-xs-4" id="prayer-image-show">
+            <div id="the_image"><%= image_tag @prayer.image %></div><br />
           </div>
           <div class="col-xs-8">
             <p class="list-group-item-text">
@@ -66,6 +66,7 @@
               <div>
                 <% if current_admin %>
                   <%= link_to "Edit prayer intention", '/prayers/' + @prayer.id.to_s + '/comments/' + c.id.to_s + '/edit' %><br />
+                  <%= link_to "Delete prayer intention", '/prayers/' + @prayer.id.to_s + '/comments/' + c.id.to_s, method: :delete %>
                 <% end %>
               </div>
               <hr>
