@@ -2,7 +2,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">
         <h3>What would you like to pray about?</h3>
-        <h4>Choose a prayer category</h4>
+        <h4><em>Choose a prayer category</em></h4>
         <%= form_tag('/categories', :method=>:get) do %>
           <div>
           <%= select_tag "id", options_from_collection_for_select(Category.all, "id", "cat_name", params[:id]) %>
