@@ -30,3 +30,24 @@ body{
   background-color: #E9EBEE;
 
 }
+
+.alert-error  {
+  color: white;
+  background-color: #f44336;
+  border-color: #8F0000;
+  font-size: 16px;
+}
+
+.alert-success {
+  color: white;
+  background-color: #7CB342;
+  border-color: 558B2F;
+  font-size: 16px;
+}
+
+.alert-notice {
+  color: white;
+  background-color: #558B2F;
+  border-color: #33691E;
+  font-size: 16px;
+}
