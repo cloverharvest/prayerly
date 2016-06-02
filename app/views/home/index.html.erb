@@ -1,9 +1,10 @@
-
+<div class ="container-fluid">
 <h1 class="landing-title">Welcome to Prayerly</h1>
-<div class="video-container">
-  <!-- <video autoplay loop muted>
-    <source src="lit_candle.mp4" type="video/mp4">
-    <source src="lit_candle.webm" type="video/webm">
-  </video> -->
-  <%= video_tag "lit_candle.mp4", autoplay: :autoplay, loop: :loop%>
-</div>
+<%= link_to "All prayer categories", categories_path %>
+  <div class="video-container">
+    <!-- <video autoplay loop muted>
+      <source src="lit_candle.mp4" type="video/mp4">
+      <source src="lit_candle.webm" type="video/webm">
+    </video> -->
+    <%= video_tag "lit_candle.mp4", autoplay: :autoplay, loop: :loop%>
+  </div>
