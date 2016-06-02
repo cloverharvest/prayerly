@@ -53,3 +53,7 @@ Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
 * Ability to tag prayer intentions that have been read and prayed for by other users
 
 ###Screenshots
+
+![User Story](https://github.com/cloverharvest/prayerly/lib/assets/Screen Shot 2016-06-02 at 4.11.55 PM.png "User Story")
+
+![ERD and Models](https://github.com/cloverharvest/prayerly/lib/assets/erd_and_models.JPG "ERD and models")
