@@ -2,15 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-/*.jumbotron {
-  position: relative;
-  background: url("woman_kneeling.png") center center;
-  width: 1100px;
-  height: 600px;
-  background-size: cover;
-  overflow: hidden;
-  color:white;
-}*/
 .landing-title {
   color: #FAEBD7;
 }
@@ -36,4 +27,14 @@
   left: 0;
   min-width: 100%;
   min-height: 100%;
+}
+
+.video-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: #000;
+  opacity: .5;
 }

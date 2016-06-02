@@ -3,9 +3,5 @@
 <p class="statement-one">"Encourage one another daily, as long as it is called Today…" Hebrews 3:13</p>
 <%= button_to "Come in", categories_path, :method => :get, id: "enter_button", class: "btn btn-primary" %>
   <div class="video-container">
-    <!-- <video autoplay loop muted>
-      <source src="lit_candle.mp4" type="video/mp4">
-      <source src="lit_candle.webm" type="video/webm">
-    </video> -->
     <%= video_tag "lit_candle.mp4", autoplay: :autoplay, loop: :loop %>
   </div>
