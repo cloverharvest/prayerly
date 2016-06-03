@@ -10,7 +10,7 @@ noun
    * synonyms:	invocation, intercession, devotion; archaicorison  
    * a religious service, especially a regular one, at which people
      gather in order to pray together.
-     an earnest hope or wish.
+   * an earnest hope or wish.
 ```
 
 ### What is Prayerly
@@ -19,9 +19,13 @@ Link to Prayerly: https://stormy-beach-45228.herokuapp.com/
 
 This is a prayer app built on Rails.
 
+An anonymous user can go to the site lookup a prayer via a simple searc form or dropdown to filter. He can also add a prayer intentions via an individual prayer.
+
+An admin, on the other hand, is able to Full Crud prayers, edit and delete comments; and add prayer categories.
+
 While most of the prayers are in the Christian/Catholic discipline, this app is modular and can be used to build a prayer application ecumenically.
 
-It is the builder's intent that this serves as encouragement for coders and believers alike.
+It is the builder's intent and purpose that this contributes to open source and would also serve as a spiritual encouragement for coders and believers alike.
 
 Credit goes to EWTN, catholiconline.com, praymorenovenas.com, gratefulness.com for the right direction and inspiration with regard to content.
 
