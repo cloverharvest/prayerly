@@ -52,6 +52,10 @@ Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
 * Have candles glow more if it is dedicated to a person with the same name or purpose
 * Ability to tag prayer intentions that have been read and prayed for by other users
 
+### Some set-up
+
+* Admin path is /log_in
+
 ###Screenshots
 
 ![alt text](public/User_story.png)
