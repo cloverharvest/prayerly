@@ -73,13 +73,19 @@ Prayer.create({image:"http://www.seeminglyunfocused.com/wp-content/uploads/2015/
 puts "Created #{Prayer.count} prayers."
 
 # Comment.create({name:"Fatima", prayer_intention:"I hope I have fun and have a safe trip to Kathmandu.", prayers: Prayer.where(title: "Prayer for Travelers")})
-# Comment.create({name:"Cyrus", prayer_intention:"Please pray for all the children in Syria.", prayers: Prayer.where(title: "Prayer for a Child")})
+# Comment.create({name:"Cyrus", prayer_intention:"Please pray for all the children in Syria. May the strife there end soon.", prayers: Prayer.where(title: "Prayer for a Child")})
 # Comment.create({name:"Charlie", prayer_intention:"Please pray for me. I will be embarking on a pilgrimage across Europe. May it be a fruitful and protected endeavour. Thank you.", prayers: Prayer.where(title: "Prayer of St. Benedict of Nursia")})
 # Comment.create({name:"David", prayer_intention:"There's lost of stuff to fo today. May I keep a good perspective and be a kind person even amid the busyness.", prayers: Prayer.where(title:"Morning Offering")})
 # Comment.create({name:"Edward", prayer_intention:"I don't know what's next. Please guide me, Lord. Thank you.", prayers: Prayer.where(title: "Short Prayer")})
 # Comment.create({name:"Francesca", prayer_intention:"Please teach me how to pray.", prayers: Prayer.where(title:"Te Deum")})
-# Comment.create({name:"George", prayer_intention:"After living far away from home, my father wrote to me in a letter, one day, that when I feel down I should consider praying the Our Father", prayers: Prayer.where(title:"Our Father")})
 # Comment.create({name:"Henry", prayer_intention:"A priest once told me that it would be good take Mary as my Spiritual Mother especially in matters of being a good wife and mother", prayers: Prayer.where(title:"Memorare")})
 #
+# name: Angie, I would like to visit Portugal someday. I read somewhere that Portugal was spared from World War II because of their devotion to the Virgin Mary.
+# name: Ben, Dearest Child Jesus, I implore that you grant me gainful employment so me and my family will have a home and a place to live in and that we have enough to share with the less fortunate. Thank you.
+# name: Charlie, May I be more like you each and every day. To have a heart that trusts in God.
+# name: David, My father was a man of few words. One day, he sent me a gift and a letter and in that letter was a reminder to always pray the Our Father especially when being away from home was too hard to bear and that when life just simply got overwhelming. May you rest in peace, Dad.
+# name: Esther,  could hardly play the piano and much less read the chords on the music sheet. Te Deum is only one of the few hymns that I can play. It is very beautiful and speaks of praising Our Creator. Thank you for the gift of hymns.
+# Fionna: I pray for all children that they may grow in a home full of love and be always protected from all harm.
+
 #
 # puts "Created #{Comment.count} prayer intentions."
