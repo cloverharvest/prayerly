@@ -15,7 +15,7 @@ noun
 
 ### What is Prayerly
 
-Link to Prayerly: https://stormy-beach-45228.herokuapp.com/
+Link to Prayerly: http://stormy-beach-45228.herokuapp.com/
 
 This is a prayer app built on Rails.
 
@@ -68,3 +68,5 @@ Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
 ![alt text](public/User_story.png)
 
 ![alt text](public/erd_and_models.JPG)
+
+![alt text](public/Trello.png)
