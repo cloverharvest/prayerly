@@ -75,7 +75,7 @@ puts "Created #{Prayer.count} prayers."
 # Comment.create({name:"Fatima", prayer_intention:"I hope I have fun and have a safe trip to Kathmandu.", prayers: Prayer.where(title: "Prayer for Travelers")})
 # Comment.create({name:"Cyrus", prayer_intention:"Please pray for all the children in Syria. May the strife there end soon.", prayers: Prayer.where(title: "Prayer for a Child")})
 # Comment.create({name:"Charlie", prayer_intention:"Please pray for me. I will be embarking on a pilgrimage across Europe. May it be a fruitful and protected endeavour. Thank you.", prayers: Prayer.where(title: "Prayer of St. Benedict of Nursia")})
-# Comment.create({name:"David", prayer_intention:"There's lost of stuff to fo today. May I keep a good perspective and be a kind person even amid the busyness.", prayers: Prayer.where(title:"Morning Offering")})
+# Comment.create({name:"David", prayer_intention:"There's lost of stuff to do today. May I keep a good perspective and be a kind person even amid the busyness.", prayers: Prayer.where(title:"Morning Offering")})
 # Comment.create({name:"Edward", prayer_intention:"I don't know what's next. Please guide me, Lord. Thank you.", prayers: Prayer.where(title: "Short Prayer")})
 # Comment.create({name:"Francesca", prayer_intention:"Please teach me how to pray.", prayers: Prayer.where(title:"Te Deum")})
 # Comment.create({name:"Henry", prayer_intention:"A priest once told me that it would be good take Mary as my Spiritual Mother especially in matters of being a good wife and mother", prayers: Prayer.where(title:"Memorare")})
