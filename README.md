@@ -19,17 +19,17 @@ Link to Prayerly: https://stormy-beach-45228.herokuapp.com/
 
 This is a prayer app built on Rails.
 
-An anonymous user can go to the site lookup a prayer via a search form or dropdown filter. He or she can also add a prayer intentions via an individual prayer.
+An anonymous user can go to the site, lookup a prayer via a search form or dropdown filter. He or she can also add a prayer intentions via an individual prayer.
 
-An admin, on the other hand, is able to Full Crud prayers, edit and delete comments; and add prayer categories.
+An admin, on the other hand, is able to full crud prayers; edit and delete comments; and add prayer categories.
 
-While most of the prayers are in the Christian/Catholic discipline, this app is modular and can be used to build a prayer application ecumenically.
+While most of the prayers are in the Christian/Catholic discipline, this app is modular and can be used to build prayer applications that are ecumenical.
 
-It is the builder's intent and purpose that this contributes well to open source and would also serve as a spiritual encouragement for coders and believers alike.
+It is the builder's intent and purpose that this contributes well to open source and that this would also serve as a spiritual encouragement for coders and believers, alike.
 
 Credit goes to EWTN, catholiconline.com, praymorenovenas.com, gratefulness.com for the direction and inspiration with regard to content.
 
-The builder would also like to thank her instructors Juliana, Justin, Nathan and D-i-r Nick at General Assembly for teaching her the fine art and science of web development.
+She would also like to thank her instructors Juliana, Justin, Nathan and D-i-r Nick at General Assembly for teaching her the fine art and science of web development.
 
 Please also visit Saintly, a saints database app built on Mongoose, Express and Node.js(MEN) stack.
 Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
@@ -39,7 +39,7 @@ Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
 * Ruby on Rails
 * Postgresql
 * HTML and CSS
-* Bootstrap and Material Colors
+* Bootstrap and Material Design Colors
 
 ###Features
 
