@@ -60,7 +60,7 @@ Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
 ### Some set-up
 
 * Admin path is /log_in
-* Additional gems: humanizer(captcha), bcrypt, twitter-boostrap
+* Additional gems: humanizer(captcha), bcrypt, twitter-bootstrap
 
 
 ###Screenshots
