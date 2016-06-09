@@ -3,10 +3,11 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="row>"
-          <div class="col-xs-4 col-md-12" id="prayer-image-show">
-            <div id="the_image"><%= image_tag @prayer.image, :class => "img-responsive" %></div><br />
+          <div class="col-md-3 col-xs-12 thumbnail saint-image" id="prayer-image-show">
+            <%= image_tag @prayer.image, :class => "img-responsive" %><br />
           </div>
-          <div class="col-xs-8 col-md-12">
+
+          <div class="col-md-9 col-xs-12">
             <p class="list-group-item-text">
               <div>
                 <h4>Title: <%= @prayer.title %></h4>
