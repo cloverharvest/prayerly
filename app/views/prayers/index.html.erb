@@ -1,37 +1,38 @@
-<h3 class="list-prayers-index">All prayers</h3>
-<div class="col-xs-10 col-xs-offset-1">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <%= form_tag prayers_path, :method => 'get', id: "search-form" do %>
-        <div>
-          <%= text_field_tag :search, params[:search], size: 30, placeholder: 'Search prayers', class: "form-control" %>
+<!-- <div class="prayer-list-container container" id="prayer-list"> -->
+    <div class="col-md-10 col-md-offset-1">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <%= form_tag prayers_path, :method => 'get', id: "search-form" do %>
+            <div>
+              <%= text_field_tag :search, params[:search], size: 30, placeholder: 'Search all prayers', class: "form-control" %>
+            </div>
+            <div class="search_button">
+            <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+            </div>
+          <% end %>
         </div>
-        <div class="search_button">
-        <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
-        </div>
-      <% end %>
+      </div>
+    </div>
+<!-- </div> -->
+<!-- <div class="container"> -->
+  <% if current_admin %>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <div>
+            <%= link_to "Add a new prayer", new_prayer_path %>
+          </div>
+      </div>
     </div>
   </div>
-</div>
-<% if current_admin %>
-<div class="col-xs-10 col-xs-offset-1">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-        <div>
-          <%= link_to "Add a new prayer", new_prayer_path %>
-        </div>
-    </div>
-  </div>
-</div>
-<% end %>
-<br />
-<div>
-<div>
+  <% end %>
+<!-- </div> -->
+
+<!-- <div class = "container"> -->
   <% if @prayers.present? %>
     <%= render "prayer" %>
   <% else %>
-</div>
-  <div class="col-xs-10 col-xs-offset-1">
+  <div class="col-md-10 col-md-offset-1">
     <div class="panel panel-default">
       <div class="panel-heading">
         <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
@@ -39,4 +40,4 @@
     </div>
   </div>
   <% end %>
-</div>
+<!-- </div> -->

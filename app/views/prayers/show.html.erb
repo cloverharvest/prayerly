@@ -1,5 +1,5 @@
-<div class="prayer-list-container container" id="prayer-list">
-  <div class="col-xs-10 col-xs-offset-1">
+<!-- <div class="prayer-show-container container" id="prayer-show"> -->
+  <div class="col-md-10 col-md-offset-1">
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="row">
@@ -21,11 +21,11 @@
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
 <br />
-<div class="container">
+<!-- <div class="container"> -->
   <% if current_admin %>
-    <div class="col-xs-10 col-xs-offset-1">
+    <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-body">
           <div>
@@ -37,20 +37,20 @@
       </div>
     </div>
   <% end %>
-</div>
-<div class="container">
-  <div class="col-xs-10 col-xs-offset-1">
+<!-- </div> -->
+<!-- <div class="container"> -->
+  <div class="col-md-10 col-md-offset-1">
     <div class="panel panel-default">
       <div class="panel-body">
         <%= link_to "Add a Prayer Intention", new_prayer_comment_path(@prayer) %>
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
 
 
-<div class="comment-list-container container">
-  <div class="col-xs-10 col-xs-offset-1">
+<!-- <div class="comment-list-container container"> -->
+  <div class="col-md-10 col-md-offset-1">
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="row">
@@ -65,7 +65,7 @@
                 <p><%= c.prayer_intention %></p>
               </div>
               <div>
-        				<p class="small pull-right comments-show-post-date">posted <%= time_ago_in_words(c.created_at) %> ago</p><br>
+        				<p class="small pull-right comments-show-post-date">posted <%= time_ago_in_words(c.created_at) %> ago</p><br />
               </div>
               <div>
                 <% if current_admin %>
@@ -80,4 +80,4 @@
     </div>
   </div>
 </div>
-</div>
+<!-- </div> -->

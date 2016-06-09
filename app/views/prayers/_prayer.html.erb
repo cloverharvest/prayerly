@@ -1,13 +1,13 @@
-<div class="prayer-list-container container">
+
   <% @prayers.each do |prayer| %>
-  <div class="col-xs-12">
+  <div class="col-md-10 col-md-offset-1">
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="row">
-            <div class="col-xs-4" id="prayer-image">
+            <div class="col-md-4 col-xs-12 thumbnail saint-image">
               <%= image_tag prayer.image, :class => "img-responsive" %>
             </div>
-            <div class="col-xs-8">
+            <div class="col-md-8 col-xs-12">
               <p class="list-group-item-text">
               <div>
               <%= link_to prayer_path(prayer) do %>
@@ -24,4 +24,3 @@
     </div>
   </div>
   <% end %>
-</div>
