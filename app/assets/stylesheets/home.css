@@ -4,11 +4,20 @@
 
 .landing-title {
   color: #FAEBD7;
+  margin-left: 30px;
 }
 
-.statement-one{
+.statement-one {
   color: #FAEBD7;
+  text-align: right;
+  margin-right: 30px;
+  margin-top: 300px;
 }
+
+#enter_button {
+  margin-left: 30px;
+}
+
 .video-container {
   position: absolute;
   z-index: -100;
