@@ -5,13 +5,14 @@
 .landing-title {
   color: #FAEBD7;
   margin-left: 30px;
+  margin-top: 40px;
 }
 
 .statement-one {
   color: #FAEBD7;
   text-align: right;
   margin-right: 30px;
-  margin-top: 300px;
+  margin-top: 320px;
 }
 
 #enter_button {
