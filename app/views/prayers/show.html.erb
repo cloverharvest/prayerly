@@ -1,13 +1,13 @@
-<!-- <div class="prayer-list-container container" id="prayer-list"> -->
+<div class="prayer-list-container container" id="prayer-list">
   <div class="col-xs-10 col-xs-offset-1">
     <div class="panel panel-default">
       <div class="panel-body">
-        <div class="row>"
-          <div class="col-md-3 col-xs-12 thumbnail saint-image" id="prayer-image-show">
+        <div class="row">
+          <div class="col-md-4 col-xs-12 thumbnail saint-image" id="prayer-image-show">
             <%= image_tag @prayer.image, :class => "img-responsive" %><br />
           </div>
 
-          <div class="col-md-9 col-xs-12">
+          <div class="col-md-8 col-xs-12">
             <p class="list-group-item-text">
               <div>
                 <h4>Title: <%= @prayer.title %></h4>
@@ -21,26 +21,29 @@
       </div>
     </div>
   </div>
-<!-- </div> -->
+</div>
 <br />
-<% if current_admin %>
-  <div class="col-xs-10 col-xs-offset-1">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <div>
-          <%= link_to "Edit prayer", edit_prayer_path %><br />
-          <%= link_to "Delete prayer","/prayers/" + @prayer.id.to_s, method: :delete %><br />
-          <%= link_to "See all prayers", prayers_path %><br />
+<div class="container">
+  <% if current_admin %>
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div>
+            <%= link_to "Edit prayer", edit_prayer_path %><br />
+            <%= link_to "Delete prayer","/prayers/" + @prayer.id.to_s, method: :delete %><br />
+            <%= link_to "See all prayers", prayers_path %><br />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<% end %>
-
-<div class="col-xs-10 col-xs-offset-1">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <%= link_to "Add a Prayer Intention", new_prayer_comment_path(@prayer) %>
+  <% end %>
+</div>
+<div class="container">
+  <div class="col-xs-10 col-xs-offset-1">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= link_to "Add a Prayer Intention", new_prayer_comment_path(@prayer) %>
+      </div>
     </div>
   </div>
 </div>
