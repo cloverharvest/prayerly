@@ -19,7 +19,7 @@ Link to Prayerly: http://stormy-beach-45228.herokuapp.com/
 
 This is a prayer app built on Rails.
 
-An anonymous user can go to the site, lookup a prayer via a search form or dropdown filter. He or she can also add a prayer intentions via an individual prayer.
+An anonymous user can go to the site, lookup a prayer via a search form or dropdown filter. He or she can also add a prayer intention via an individual prayer.
 
 An admin, on the other hand, is able to full crud prayers; edit and delete comments; and add prayer categories.
 
