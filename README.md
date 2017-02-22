@@ -59,7 +59,7 @@ Link to Saintly: https://rocky-fortress-73738.herokuapp.com/
 
 ### Some set-up
 
-* Admin path is /log_in
+* Admin path is /log_in, User name: ab@ab.com, Password: 1234
 * Additional gems: humanizer(captcha), bcrypt, twitter-bootstrap
 
 
