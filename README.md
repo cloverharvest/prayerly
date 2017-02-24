@@ -1,5 +1,7 @@
 ## Prayerly
 
+[![Code Climate](https://codeclimate.com/github/cloverharvest/prayerly/badges/gpa.svg)](https://codeclimate.com/github/cloverharvest/prayerly)
+
 ```
 prayer
 /prer/
